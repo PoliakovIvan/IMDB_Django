@@ -1,5 +1,5 @@
 """
-WSGI config for imdb project.
+WSGI config for IMDBdj project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

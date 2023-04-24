@@ -1,5 +1,5 @@
 """
-ASGI config for imdb project.
+ASGI config for IMDBdj project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

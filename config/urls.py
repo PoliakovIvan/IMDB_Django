@@ -1,5 +1,5 @@
 """
-URL configuration for imdb project.
+URL configuration for IMDBdj project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,14 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.http import HttpResponse
-from django.urls import path
-
-
-"""def my_view(request):
-    return HttpResponse('Ok')"""
+from django.urls import path, include
 
 urlpatterns = [
-    #path('/', my_view()),
+    path('login/', include('apps.userlogin.urls')),
     path('admin/', admin.site.urls),
 ]
