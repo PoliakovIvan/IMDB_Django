@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def login_view(request):
-    return HttpResponse(render(request, 'login.html'))
+    return HttpResponse(render(request, 'userlogin/login.html'))
