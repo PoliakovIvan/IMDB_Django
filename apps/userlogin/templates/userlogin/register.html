@@ -5,13 +5,11 @@
 
 <form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit"><br/>
-    {{form_error}}
-</form>
 
-<br/>
-<a href="{% url 'auth:register' %}"> register </a>
+    {{ form.as_p }}
+
+    <input type="submit"><br/>
+</form>
 
 </body>
 

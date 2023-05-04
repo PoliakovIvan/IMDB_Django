@@ -1,0 +1,12 @@
+<html>
+<title>Account</title>
+
+<body>
+
+{{ request.user }}
+
+<a href="{% url 'auth:logout' %}"> Log out</a>
+
+</body>
+
+</html>

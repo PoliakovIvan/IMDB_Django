@@ -1,13 +1,16 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from .models import Student
+from django.views.generic import ListView, CreateView, UpdateView
 
+class StudentListView(ListView):
+    model = Student
 
-@login_required
-def hello(request):
-    return HttpResponse('Hello')
+class StudentCreateView(CreateView):
+    model = Student
+    success_url = reverse_lazy('mainpage:student-list')
+    fields = ['name']
 
-@login_required
-def abc(request):
-    return HttpResponse('abc')
-
+class StudentUpdateView(UpdateView):
+    model = Student
+    success_url = reverse_lazy('mainpage:student-list')
+    fields = ['name']
