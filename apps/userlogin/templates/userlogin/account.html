@@ -1,12 +1,9 @@
-<html>
-<title>Account</title>
+{% extends "base.html" %}
 
-<body>
+{% block content%}
 
 {{ request.user }}
 
 <a href="{% url 'auth:logout' %}"> Log out</a>
 
-</body>
-
-</html>
+{% endblock %}

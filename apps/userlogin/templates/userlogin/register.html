@@ -1,16 +1,14 @@
-<html>
-<title>Log in</title>
+{% extends "base.html" %}
+{% load bootstrap %}
 
-<body>
+{% block title %} Log in {% endblock%}
 
+{% block content %}
 <form method="POST">
     {% csrf_token %}
 
-    {{ form.as_p }}
+    {{ form|bootstrap_horizontal:'col-lg-4' }}
 
     <input type="submit"><br/>
 </form>
-
-</body>
-
-</html>
+{% endblock%}

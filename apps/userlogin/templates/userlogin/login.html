@@ -1,8 +1,6 @@
-<html>
-<title>Log in</title>
+{% extends "base.html" %}
 
-<body>
-
+{% block content%}
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -13,6 +11,4 @@
 <br/>
 <a href="{% url 'auth:register' %}"> register </a>
 
-</body>
-
-</html>
+{% endblock %}
