@@ -1,11 +1,12 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 
 User = get_user_model()
 
 class LoginForm(forms.Form):
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    email = forms.EmailField(label=_('Email Address'))
+    password = forms.CharField(label=_('Password'), widget=forms.PasswordInput)
 
     def clean(self):
         user = User.objects.filter(email=self.cleaned_data['email']).first()
